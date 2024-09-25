@@ -1,12 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fancy Form</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    
+
+<body class="main-container">
+    <div class="left-container">
+        <div>
+            <img src="odin-lined.png" alt="The Odin logo">
+            <p>ODIN</p>
+        </div>
+        <p>Credits for the picture</p>
+    </div>
+    <div class="right-container">
+        <p>This is not a real online service! you know you need something like this in your life to help you realize
+            your deepest dreams. Sign up <em>now</em> to get started.</p>
+        <p>You <em>know</em> you want to.</p>
+        <div> Let's do this!
+            <form action="">
+                <div class="input-container">
+                    <label for="first_name">First Name</label>
+                    <input type="text" id="first_name" name="first_name">
+
+                    <label for="last_name">Last Name</label>
+                    <input type="text" id="last_name" name="last_name">
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email">
+
+                    <label for="phone_number">Phone Number</label>
+                    <input type="tel" id="phone_number" name="phone_number">
+
+                    <label for="pwd">Password</label>
+                    <input type="password" id="pwd" name="password">
+
+                    <label for="confirm_pwd">Confirm Password</label>
+                    <input type="password" id="confirm_pwd" name="confirm_password">
+                </div>
+                <button type="submit">Create Account</button>
+                <p>Already have an account? <a href="login">Log in</a></p>
+            </form>
+        </div>
+    </div>
+
+
 </body>
+
 </html>
