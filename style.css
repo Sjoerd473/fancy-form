@@ -1,70 +1,215 @@
+@font-face {
+  font-family: norse;
+  src: url(./fonts/norse-bold-webfont.woff);
+  src: url(./fonts/norse-bold-webfont.woff2);
+}
 
-*, *::before, *::after {
-    box-sizing: border-box;
-  }
+@font-face {
+  font-family: chunkfive;
+  src: url(./fonts/chunkfive-regular-webfont.woff);
+  src: url(./fonts/chunkfive-regular-webfont.woff2);
+
+}
+
+@font-face {
+  font-family: helsinki;
+  src: url(./fonts/helsinki-webfont.woff);
+  src: url(./fonts/helsinki-webfont.woff2);
+}
+
+@font-face {
+  font-family: arch-rival;
+  src: url(./fonts/sf_arch_rival-demo.html);
+  src: url(./fonts/sf_arch_rival-webfont.woff2);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+* {
+  margin: 0;
+  list-style: none;
+}
+
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  display: flex;
+  height: 100vh;
+  --fonts: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: var(--fonts)
+}
+
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+.right-container {
+  display: flex;
+  flex-direction: column;
+  width: 65vw;
+  font-family: arch-rival;
+}
+
+.right-container>p:first-child {
+  font-size: normal;
+  margin-top: 8rem;
+  max-width: 46ch;
+}
+
+.right-container p {
+  margin: 1rem 0 0 1rem;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.right-container>p:last-child {
+  font-size: 1rem;
+  font-weight: normal;
+  font-family: var(--fonts)
+}
+
+.right-container>p:last-child>a {
+  color: #596D48;
+  text-decoration: none;
+}
+
+.input-container {
+  margin-top: 1rem;
+  box-shadow: 0px 7px 5px -5px rgba(209, 204, 204, 0.671);
   
- 
-  * {
-    margin: 0;
-    list-style: none;
-  }
-  
- 
-  body {
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
-    display:flex;
-    height:100vh;
-  }
-  
- 
-  img, picture, video, canvas, svg {
-    display: block;
-    max-width: 100%;
-  }
-  
- 
-  input, button, textarea, select {
-    font: inherit;
-  }
-  
 
-  p, h1, h2, h3, h4, h5, h6 {
-    overflow-wrap: break-word;
-  }
-  
 
-  #root, #__next {
-    isolation: isolate;
-  }
 
-  .right-container{
-    width:65%;
-  }
+}
 
-  .left-container{
-    display:flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width:35%;
-    background-image: url(galliloretta-056604-7-futuro.jpg);
-    background-size: contain;
-    background-repeat: no-repeat;
-  }
 
-  .left-container > div{
-    display:flex;
-    font-size: 8rem;
-    margin-top: 10rem;
-    color:white;
-    justify-content: center;
-  }
-  .left-container > p {
-    align-self: center;
-    margin-bottom: 1rem;
-    color: white;
-  }
 
-  div img {
-    width: 10rem;
-  }
+.set {
+  margin: 1rem 0 1rem 3rem;
+  display: flex;
+  font-family: helsinki;
+
+}
+
+.set>div:first-child {
+  margin-right: 5rem;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+
+}
+
+input {
+  border-radius: 4px;
+  border-color: rgba(0, 0, 0, 0.13);
+}
+
+input:focus {
+  outline: none;
+  box-shadow: 5px 5px 10px 0px #ccc;
+  border: 1px outset rgb(45, 111, 133);
+}
+
+input:invalid {
+  border-color: #ff0000;
+}
+
+/* input:valid {
+  border-color: green;
+} */
+
+button {
+  color: white;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 10px;
+  background-color: #596D48;
+  padding: 10px;
+  margin: 2rem 0 0 1rem;
+  width: 17rem;
+  box-shadow: 5px 5px 10px 0px #ccc;
+
+}
+
+button:active {
+  background-color: #90c066;
+
+}
+
+.left-container {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 34vw;
+  background-image: url(galliloretta-056604-7-futuro.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+
+}
+
+.left-container>div {
+  display: flex;
+  font-size: 8rem;
+  margin-top: 10rem;
+  color: white;
+  background: rgba(3, 3, 3, 0.466);
+  width: 33.7vw;
+  justify-content: center;
+  font-family: norse;
+
+
+}
+
+.left-container>p {
+  align-self: center;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.left-container>p>a {
+  color: white;
+}
+
+div img {
+  width: 10rem;
+}
